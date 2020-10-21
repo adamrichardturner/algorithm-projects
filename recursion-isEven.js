@@ -15,6 +15,8 @@ const isEven = num => {
             return isEven(num - 2);
         } else if (num < 0) {
             return 'Not a positive whole number';
+        } else {
+            return 'Not a number';
         }
     }
 }
