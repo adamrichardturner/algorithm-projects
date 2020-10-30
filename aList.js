@@ -26,10 +26,13 @@ let list = {
 // or undefined when no such element exists. 
 const testArr = [1, 2, 3];
 const arrayToList = arr => {
-    for(let i=0; i <= arr.length; i++) {
-        
+    let obj = null;
+    for(let i = arr.length - 1; i >= 0; i--) {
+        obj = {value: arr[i], rest: obj}; 
     }
+    return obj;
 }
 
 console.log(arrayToList(testArr));
+// Test
 
