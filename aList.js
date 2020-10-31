@@ -25,14 +25,36 @@ let list = {
 // and returns the element at the given position in the list (zero indexed)
 // or undefined when no such element exists. 
 const testArr = [1, 2, 3];
+
 const arrayToList = arr => {
     let obj = null;
-    for(let i = arr.length - 1; i >= 0; i--) {
-        obj = {value: arr[i], rest: obj}; 
+    for (let i = arr.length - 1; i >= 0; i--) {
+        obj = {
+            value: arr[i],
+            rest: obj
+        };
     }
     return obj;
 }
 
-console.log(arrayToList(testArr));
-// Test
+const listToArray = list => {
+    let arr = [];
+    // Loop through each element in obj
+    // if the element is another obj 
+    // push a recursive call to that element
+    for (let i in list) {
+        if (typeof list[i] === 'object') {
+            // This pushes the most nested element in the 
+            // object to the array.
+            arr.push(listToArray(list[i]));
+        } else {
+            // this pushes values to the array that are not
+            // identified as objects in the above if statement
+            arr.push(list[i]);
+        }
+    }
+    // flatten the nested array
+    return arr.flat();
+}
 
+console.log(listToArray(list));

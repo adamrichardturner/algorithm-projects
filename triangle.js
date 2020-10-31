@@ -17,4 +17,4 @@ let triangle = (baseLength) => {
     }
 }
 
-triangle(48);
+triangle(10);
