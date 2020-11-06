@@ -35,7 +35,7 @@ const arrayToList = arr => {
         };
     }
     return obj;
-}
+};
 
 const listToArray = list => {
     let arr = [];
@@ -55,6 +55,6 @@ const listToArray = list => {
     }
     // flatten the nested array
     return arr.flat();
-}
+};
 
 console.log(listToArray(list));
