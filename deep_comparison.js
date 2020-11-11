@@ -56,7 +56,7 @@ const deepEqual = (value1, value2) => {
 }
 // Test Conditions
 
-let value1 = [1, , 7, 'hello'];
+let value1 = [1, 4, 7, 'hello'];
 
 let value2 = [1, 4, 7, 'hello'];
 
