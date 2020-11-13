@@ -28,4 +28,4 @@ const test1 = [1, 5, 3, 8, 7];
 const test2 = [4, 9, 12, 4, 7];
 
 console.log(every(test1, underTen)); // returns true
-console.log(every(test2, underTen));
+console.log(every(test2, underTen)); // returns false
