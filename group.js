@@ -67,4 +67,4 @@ dogs.delete('Dodo');
 
 console.log(dogs); // [ 'Fluffy', 'Chimpy', 'Plaid', 'Babe' ] }
 
-console.log(dogs.from(dogsObj));
+console.log(Group.from(dogsObj));
