@@ -39,7 +39,7 @@ class Group {
         // Takes an iterable object and creates a group that contains all the
         // values produced by iterating over it. 
         let arr = [];
-        for (let i in obj) {
+        for (let i of obj) {
             arr.push(obj[i]);
         }
         return arr;
@@ -47,12 +47,15 @@ class Group {
 }
 
 let dogsObj = {
-    name: 'Frido',
-    age: 13,
-    name: 'Pigeon',
-    age: 11,
-    name: 'Crockett',
-    age: 4
+    frido: {
+        age: 12,
+        breed: 'bulldog'
+    },
+
+    dojo: {
+        age: 11,
+        breed: 'terrier'
+    }
 };
 
 let canines = ['Fluffy', 'Dodo', 'Chimpy', 'Plaid'];
